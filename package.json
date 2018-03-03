@@ -1,18 +1,27 @@
 {
+  "homepage": "https://rwStarnight.github.io/contacts",
   "name": "contacts",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "prop-types": "^15.6.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },
   "devDependencies": {
-    "react-scripts": "1.0.7"
+    "envify": "^4.1.0",
+    "gh-pages": "^1.1.0",
+    "react-scripts": "1.0.7",
+    "uglify-js": "^3.3.12",
+    "uglify-js-brunch": "^2.10.0",
+    "uglifyify": "^4.0.5"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   }
 }
