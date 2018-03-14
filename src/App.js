@@ -7,12 +7,14 @@ class App extends Component {
         contacts: []
     }
 
+    // Lifecycle Events: invoked immediately after the component is inserted
     componentDidMount() {
         ContactsAPI.getAll().then((contacts) => {
             this.setState({ contacts })
         })
     }
 
+    // Function to remove the specifc contact
     removeContact = (contact) => {
         this.setState((state) => ({
             contacts: state.contacts.filter((c) => c.id !== contact.id)
@@ -31,6 +33,5 @@ class App extends Component {
     )
     }
   }
-
 
   export default App;
